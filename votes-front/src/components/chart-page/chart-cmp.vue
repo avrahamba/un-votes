@@ -23,22 +23,15 @@ export default {
 
         title: {
           text: this.$t(this.filterDescrition),
-          align: "left",
-        },
-
-        subtitle: {
-          text: 'Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>',
-          align: "left",
+          align: "center",
         },
 
         yAxis: {
           title: {
-            text: "Billions",
+            text: "",
           },
           labels: {
-            formatter: function () {
-              return this.value / 1000;
-            },
+            formatter: function () {},
           },
         },
 
@@ -73,15 +66,15 @@ export default {
 
         series: [
           {
-            name: "bad",
+            name: "נגד ישראל",
             data: this.goodBadData.map((v) => v.bad),
           },
           {
-            name: "neutral",
+            name: "נטרלי",
             data: this.goodBadData.map((v) => v.neutral),
           },
           {
-            name: "good",
+            name: "בעד ישראל",
             data: this.goodBadData.map((v) => v.good),
           },
         ],
@@ -109,5 +102,13 @@ export default {
 </script>
 
 <template>
-  <highcharts :options="chartOptions"></highcharts>
+  <div class="chart-cmp">
+    <highcharts :options="chartOptions"></highcharts>
+  </div>
 </template>
+
+<style>
+.chart-cmp{
+margin-bottom: 30px;
+}
+</style>

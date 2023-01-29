@@ -2,3 +2,18 @@ body{
     margin: 0;
     direction: rtl;
 }
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+.card-neutral{
+    background-color: #fff !important;
+}
+
+.card-bed{
+    background-color: #ff615d !important;
+}
+.card-good{
+    background-color: #67be7e !important;
+}

@@ -1,55 +1,68 @@
 <script>
-import { countryDataFn, countryList } from "../../services/data-service";
-import vSelect from "vue-select";
-import cardVote from "./card-vote.vue";
+import { countryDataFn } from "../../services/data-service";
 export default {
-  components: {
-    vSelect,
-    cardVote,
-  },
   beforeMount() {
-    this.countryList = countryList.map((key) => ({
-      label: this.$t(key),
-      key,
+    const {id} = this.$route.params
+    this.selectedCountry = { key: id, label: this.$t(id) }
+    this.countryData = countryDataFn(this.selectedCountry.key).map((v) => ({
+      ...v,
+      type: v.last === "B" ? 0 : v.last === "G" ? 2 : 1,
     }));
-    this.selectedCountry = this.countryList[0];
   },
   data() {
     return {
       countryData: [],
       selectedCountry: null,
       countryList: [],
+      classType: ["card-bed", "card-neutral", "card-good"],
+      textLastType:['הצביעה נגד ישראל','נמנעה','הצביעה בעד ישראל']
     };
-  },
-  watch: {
-    selectedCountry() {
-      this.countryData = countryDataFn(this.selectedCountry.key);
-    },
   },
 };
 </script>
 
 <template>
   <div class="country-page">
-    <v-select v-model="selectedCountry" :options="countryList" />
     <div v-if="countryData">
       <h2>{{ selectedCountry.label }}</h2>
       <div class="vote-list">
-        <card-vote v-for="vote in countryData" :vote="vote" />
+        <v-card
+          v-for="vote in countryData"
+          class="vote"
+          :class="classType[vote.type]"
+        >          <v-card-item>
+
+        <div class="descrition">
+
+          {{ $t(vote.descrition) }}
+        </div>
+        
+          <div class="good">הצבעות בעד ישראל: {{ vote.countG }}</div>
+          <div class="noutral">הצבעות נטרליות: {{ vote.countA }}</div>
+          <div class="good">הצבעות נגד ישראל: {{ vote.countB }}</div>
+          <div class="good">תאריך הצבעה אחרונה: {{ vote.lastDate }}</div>
+          <div class="good">בהצבעה האחרונה המדינה {{ textLastType[vote.type] }}</div>
+        </v-card-item>  
+        </v-card>
+
       </div>
-      <!-- {{ countryData }} -->
     </div>
   </div>
 </template>
 
 <style scoped>
-.country-page{
+.country-page {
   background-color: #8ecdf8;
-  padding: 0 50px;
+  padding: 70px 50px 20px;
 }
-.vote-list{
+.vote-list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+.descrition{
+  font-size: 18px;
+line-height: 24px;
+font-weight: 700;
 }
 </style>

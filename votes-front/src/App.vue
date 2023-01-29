@@ -1,9 +1,8 @@
 <script setup>
-import homePage from "./components/homepage/home-page.vue";
-import countryPage from "./components/country-page/country-page.vue";
+import headerCmp from './components/header-cmp.vue'
 </script>
 
 <template>
-  <country-page />
-  <home-page />
+  <header-cmp />
+  <router-view />
 </template>

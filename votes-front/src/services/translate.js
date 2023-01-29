@@ -488,5 +488,9 @@ export const messages = {
       "תוכנית מידע מיוחדת בנושא פלסטין של המחלקה להסברה של המזכירות",
     "Status of Palestine in the United Nations :":
       "מעמדה של פלסטין באו\"ם",
+      "Special information programme on the question of Palestine of the Department of Global Communications of the Secretariat  :": 'תכנית הסברה מיוחדת בשאלת פלסטין של המחלקה לתקשורת גלובלית של המזכירות',
+      "Status of the Occupied Territory, including East Jerusalem :": 'מעמד השטח הכבוש, כולל מזרח ירושלים',
+      "Question of Palestine : Department of Public Information of the Secretariat :": 'שאלת פלסטין: המחלקה להסברה של המזכירות',
+      "Question of Palestine : Committee on the Exercise of the Inalienable Rights of the Palestinian People :": 'הוועדה למימוש הזכויות הבלתי ניתנות לביטול של העם הפלסטיני',
   },
 };
