@@ -9,6 +9,7 @@ export default {
       type: v.last === "B" ? 0 : v.last === "G" ? 2 : 1,
     }))
     .sort((a,b)=>(a.lastDate > b.lastDate ? -1 : 1));
+    window.scrollTo(0, 0);
   },
   data() {
     return {
