@@ -30,7 +30,7 @@ export default {
       <router-link
         v-for="country of countryList"
         :key="country.name"
-        :to="`/countriy/${country.name}`"
+        :to="`/un-votes/countriy/${country.name}`"
       >
         <v-card :class="classType[country.type]">
           <v-card-item>

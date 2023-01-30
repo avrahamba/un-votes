@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-    <router-link class="link link-1" to="/">רשימת המדינות</router-link>
-    <router-link class="link" to="/charts">גרפים מסכמים</router-link>
+    <router-link class="link link-1" to="/un-votes/">רשימת המדינות</router-link>
+    <router-link class="link" to="/un-votes/charts">גרפים מסכמים</router-link>
   </div>
 </template>
 
