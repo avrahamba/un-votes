@@ -3,6 +3,7 @@ export default{
   created(){
     const dir = this.local === 'he' ? 'rtl' : 'ltr'
     document.body.dir = dir
+    document.title = this.$t("Votes at the UN regarding Israel")
   },
   computed:{
     local(){
@@ -20,6 +21,7 @@ export default{
     local(){
       const dir = this.local === 'he' ? 'rtl' : 'ltr'
       document.body.dir = dir
+      document.title = this.$t("Votes at the UN regarding Israel")
     }
   }
 }

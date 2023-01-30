@@ -20,6 +20,8 @@ export default {
   computed: {
     countryListSorted() {
       const sortFn = (a, b) => {
+        if (a.type > b.type) return -1
+        if (a.type < b.type) return 1
         if (!a.bad && !a.neutral) return -1;
         if (!b.bad && !b.neutral) return 1;
         if (!a.good && !a.neutral) return 1;
@@ -62,7 +64,7 @@ export default {
         :key="country.name"
         :to="`/un-votes/countriy/${country.name}`"
       >
-        <v-card :class="classType[country.type]">
+        <v-card class="country-card" :class="classType[country.type]">
           <v-card-item>
             <v-card-title>
               {{ $t(country.name) }}
@@ -78,6 +80,9 @@ export default {
 </template>
 
 <style scoped>
+.country-card:hover{
+  box-shadow: 0px 7px 8px -4px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 12px 17px 2px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 5px 22px 4px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12)) !important;
+}
 .country-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

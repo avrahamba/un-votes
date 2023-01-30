@@ -17,8 +17,8 @@ export default{
         <p>{{$t('about4')}}</p>
         <h2 :style="{'margin-top': '30px'}">{{$t('about5')}}</h2>
         <p>{{$t('about6')}}</p>
-        <p>{{$t('about7')}}<a href="mailto:b.a.avraham@gmail.com">b.a.avraham@gmail.com</a></p>
-        <p>{{$t('about8')}}<a href="https://www.linkedin.com/in/avraham-ben-arosh/">https://www.linkedin.com/in/avraham-ben-arosh/</a></p>
+        <p><font-awesome-icon icon="fa-at" /> <a href="mailto:b.a.avraham@gmail.com">b.a.avraham@gmail.com</a></p>
+        <p><font-awesome-icon icon="fa-brands fa-linkedin" /> <a href="https://www.linkedin.com/in/avraham-ben-arosh/">https://www.linkedin.com/in/avraham-ben-arosh/</a></p>
     </div>
 </template>
 

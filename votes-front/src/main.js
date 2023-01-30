@@ -6,7 +6,13 @@ import App from "./App.vue";
 
 import { router } from "./routes";
 
-// document.title = 'הצבאות באו"ם בעניין ישראל'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faLinkedin, faAt)
+
+
 
 // Vuetify
 import "vuetify/styles";
@@ -27,4 +33,4 @@ const i18n = createI18n({
   messages,
 });
 
-createApp(App).use(vuetify).use(i18n).use(router).mount("#app");
+createApp(App).use(vuetify).use(i18n).use(router).component('font-awesome-icon', FontAwesomeIcon).mount("#app");

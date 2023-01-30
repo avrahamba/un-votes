@@ -262,15 +262,14 @@ export const messages = {
     "history by date2":"'s vote history by date",
     'trnslate':'עב',
     'Sort by support for Israel':'Sort by support for Israel',
-    'Sort by thousand byte':'Sort by support for Israel',
+    'Sort by thousand byte':'Sort by thousand byte',
     about1: 'Working method',
     about2: 'I took from the UN website the list of votes according to the "Palestine" filter. The list of votes are:',
     about3: `I did not take the votes of the Security Council, but only votes open to all countries, because the purpose of the project is to show Israel's status and friendship with the various countries, and not with the individual members of the Security Council.`,
     about4: `I started from the premise that Israel always votes for itself, therefore the definition of voting for Israel is to vote like Israel. Each country has 5 options in each vote - yes, no, and neutral. Each of them is an active vote. And also a country that does not exist like East Germany, which is not counted, and another possibility of a country that exists but does not vote. For example, Afghanistan is in this position right now, and I treat it like a country that doesn't exist.`,
     about5: 'contact',
     about6: 'My name is Avraham Ben Arosh',
-    about7: 'Email: ',
-    about8: 'LinkedIn: '
+    "Votes at the UN regarding Israel":"Votes at the UN regarding Israel"
 
   },
   he: {
@@ -544,11 +543,10 @@ export const messages = {
       about1: 'שיטת עבודה',
       about2: 'לקחתי מתוך אתר האו"ם את רשימת ההצבעות לפי פילטור "פלסטין" רשימת ההצבעות הן:',
       about3: 'לא לקחתי את הצבעות של מועצת הביטחון אלא רק הצבעות פתוחות לכלל המדינות, כיוון שמטרת הפרוייקט הוא להראות את מעמד וחברות ישראל עם המדינות השונות, ולא עם החברות הבודדות של מועצת הביטחון.',
-      about4: 'יצאתי מנקודת הנחה שתמיד ישראל מצביעה בעד עצמה, ולכן ההגדרה להצבעה בעד ישראל היא להצביע כמו ישראל. יש לכל מדינה בכל הצבעה 5 אפשרויות - כן, לא, ונטרלי. כל אחת מהן זאת הצבעה אקטיבית. וכן מדינה שלא קיימת כמו מזרח גרמניה, שלא נספרת, ואפשרות נוספת של מדינה ששקיימת אבל לא מצביעה. לדוגמא אפגניסטן במעמד הזה כרגע, ואני מתייחס לזה כמו למדינה שלא קיימת.',
+      about4: 'יצאתי מנקודת הנחה שתמיד ישראל מצביעה בעד עצמה, ולכן ההגדרה להצבעה בעד ישראל היא להצביע כמו ישראל. יש לכל מדינה בכל הצבעה 5 אפשרויות - כן, לא, ונטרלי. כל אחת מהן זאת הצבעה אקטיבית. וכן מדינה שלא קיימת כמו מזרח גרמניה, שלא נספרת, ואפשרות נוספת של מדינה שקיימת אבל לא מצביעה. לדוגמא אפגניסטן במעמד הזה כרגע, ואני מתייחס לזה כמו למדינה שלא קיימת.',
       about5: 'דרכי יצירת קשר',
       about6: 'שמי אברהם בן ארוש',
-      about7: 'מייל: ',
-      about8: 'לינקדאין: '
+      "Votes at the UN regarding Israel":'הצבעות באו"ם בעניין ישראל',
 
   },
 };
