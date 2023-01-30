@@ -32,7 +32,7 @@ export default {
     chartOptions() {
       return {
         chart: {
-          type: "area",
+          type: "column",
         },
 
         title: {
@@ -42,10 +42,7 @@ export default {
 
         yAxis: {
           title: {
-            text: "",
-          },
-          labels: {
-            formatter: function () {},
+            text: "הצבעות",
           },
         },
 
