@@ -36,13 +36,18 @@ export default {
         },
 
         title: {
-          text: `הסטוריית ההצבעות של ${this.$t(this.selectedCountry.key)} לפי תאריך`,
+          text: `הסטוריית ההצבעות של ${this.$t(
+            this.selectedCountry.key
+          )} לפי תאריך`,
           align: "center",
         },
 
         yAxis: {
           title: {
             text: "הצבעות",
+          },
+          stackLabels: {
+            enabled: true,
           },
         },
 
@@ -60,17 +65,9 @@ export default {
           align: "right",
           verticalAlign: "middle",
         },
-
         plotOptions: {
-          area: {
+          column: {
             stacking: "normal",
-            lineColor: "#666666",
-            lineWidth: 1,
-
-            marker: {
-              lineWidth: 1,
-              lineColor: "#666666",
-            },
           },
         },
         colors: ["#ff2c27", "#fbbc05", "#34a853"],
@@ -115,7 +112,10 @@ export default {
 <template>
   <div class="page" v-if="countryData">
     <h1>{{ selectedCountry.label }}</h1>
-    <highcharts style="margin-bottom: 20px;" :options="chartOptions"></highcharts>
+    <highcharts
+      style="margin-bottom: 20px"
+      :options="chartOptions"
+    ></highcharts>
 
     <div class="vote-list">
       <v-card
