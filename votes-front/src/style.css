@@ -28,3 +28,11 @@ h1 {
     padding: 70px 50px 20px;
     min-height: 100vh;
 }
+
+@media (max-width: 960px){
+    .page {
+        background-color: #8ecdf8;
+        padding: 70px 10px 20px;
+        min-height: 100vh;
+    }    
+}
