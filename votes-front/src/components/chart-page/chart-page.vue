@@ -22,14 +22,8 @@ export default {
 </script>
 
 <template>
-  <div class="chart-page">
+  <div class="page">
+    <h1>גרפים מסכמים</h1>
     <chart-cmp v-for="filterDescrition in filterDescritionList" :filterDescrition="filterDescrition" />
   </div>
 </template>
-
-
-<style>
-.chart-page{
-  padding: 70px 50px 20px;
-}
-</style>

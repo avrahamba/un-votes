@@ -25,7 +25,8 @@ export default {
 </script>
 
 <template>
-  <div class="country-list-page">
+  <div class="page">
+    <h1>רשימת המדינות</h1>
     <div class="country-list">
       <router-link
         v-for="country of countryList"
@@ -54,10 +55,6 @@ export default {
 </template>
 
 <style scoped>
-.country-list-page {
-  background-color: #8ecdf8;
-  padding: 70px 50px 20px;
-}
 .country-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

@@ -6,6 +6,8 @@ import App from './App.vue'
 
 import {router} from './routes'
 
+// document.title = 'הצבאות באו"ם בעניין ישראל'
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'

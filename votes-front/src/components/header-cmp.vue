@@ -1,7 +1,8 @@
 <template>
   <div class="header">
-    <router-link class="link link-1" to="/un-votes/">רשימת המדינות</router-link>
+    <router-link class="link" to="/un-votes/">רשימת המדינות</router-link>
     <router-link class="link" to="/un-votes/charts">גרפים מסכמים</router-link>
+    <router-link class="link" to="/un-votes/about">אודות</router-link>
   </div>
 </template>
 
@@ -24,8 +25,7 @@
 .link{
     font-size: 18px;
 }
-.link-1{
-    
+.link:not(:last-child){
     border-inline-end: 1px solid black;
     padding-inline-end: 10px;
     margin-inline-end: 10px;

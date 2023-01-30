@@ -7,6 +7,11 @@ a {
     color: #000;
     text-decoration: none;
 }
+
+h1 {
+    margin-bottom: 30px;
+}
+
 .card-neutral{
     background-color: #fff !important;
 }
@@ -16,4 +21,10 @@ a {
 }
 .card-good{
     background-color: #67be7e !important;
+}
+
+.page {
+    background-color: #8ecdf8;
+    padding: 70px 50px 20px;
+    min-height: 100vh;
 }

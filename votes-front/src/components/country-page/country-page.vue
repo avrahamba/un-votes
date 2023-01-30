@@ -22,9 +22,9 @@ export default {
 </script>
 
 <template>
-  <div class="country-page">
+  <div class="page">
     <div v-if="countryData">
-      <h2>{{ selectedCountry.label }}</h2>
+      <h1>{{ selectedCountry.label }}</h1>
       <div class="vote-list">
         <v-card
           v-for="vote in countryData"
@@ -33,10 +33,8 @@ export default {
         >          <v-card-item>
 
         <div class="descrition">
-
           {{ $t(vote.descrition) }}
         </div>
-        
           <div class="good">הצבעות בעד ישראל: {{ vote.countG }}</div>
           <div class="noutral">הצבעות נטרליות: {{ vote.countA }}</div>
           <div class="good">הצבעות נגד ישראל: {{ vote.countB }}</div>
@@ -51,10 +49,6 @@ export default {
 </template>
 
 <style scoped>
-.country-page {
-  background-color: #8ecdf8;
-  padding: 70px 50px 20px;
-}
 .vote-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
