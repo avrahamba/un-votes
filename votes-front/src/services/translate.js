@@ -1,23 +1,23 @@
 export const messages = {
   en: {
     "Peaceful settlement of the question of Palestine :":
-      "Peaceful settlement of the question of Palestine :",
+      "Peaceful settlement of the question of Palestine",
     "Division for Palestinian Rights of the Secretariat :":
-      "Division for Palestinian Rights of the Secretariat :",
+      "Division for Palestinian Rights of the Secretariat",
     "Committee on the Exercise of the Inalienable Rights of the Palestinian People :":
-      "Committee on the Exercise of the Inalienable Rights of the Palestinian People :",
+      "Committee on the Exercise of the Inalienable Rights of the Palestinian People",
     "Special information programme on the question of Palestine of the Department of Global Communications of the Secretariat :":
-      "Special information programme on the question of Palestine of the Department of Global Communications of the Secretariat :",
+      "Special information programme on the question of Palestine of the Department of Global Communications of the Secretariat",
     "Special information programme on the question of Palestine of the Department of Public Information of the Secretariat :":
-      "Special information programme on the question of Palestine of the Department of Public Information of the Secretariat :",
-    "Jerusalem :": "Jerusalem :",
+      "Special information programme on the question of Palestine of the Department of Public Information of the Secretariat",
+    "Jerusalem :": "Jerusalem",
     "Department of Public Information of the Secretariat :":
-      "Department of Public Information of the Secretariat :",
-    "Question of Palestine :": "Question of Palestine :",
+      "Department of Public Information of the Secretariat",
+    "Question of Palestine :": "Question of Palestine",
     "The uprising (intifadah) of the Palestinian people :":
-      "The uprising (intifadah) of the Palestinian people :",
+      "The uprising (intifadah) of the Palestinian people",
     "International Peace Conference on the Middle East :":
-      "International Peace Conference on the Middle East :",
+      "International Peace Conference on the Middle East",
     AFG: "AFGHANISTAN",
     ALB: "ALBANIA",
     DZA: "ALGERIA",
@@ -220,29 +220,58 @@ export const messages = {
     GER: "GERMANY, FEDERAL REPUBLIC OF",
     descrition: "descrition",
     "The uprising (intifadah) of the Palestinian People :":
-      "The uprising (intifadah) of the Palestinian People :",
+      "The uprising (intifadah) of the Palestinian People",
     "Israeli settlement activities in the occupied Palestinian territory, in particular in occupied East Jerusalem :":
-      "Israeli settlement activities in the occupied Palestinian territory, in particular in occupied East Jerusalem :",
+      "Israeli settlement activities in the occupied Palestinian territory, in particular in occupied East Jerusalem",
     "Special information programme on the question of Palestine :":
-      "Special information programme on the question of Palestine :",
+      "Special information programme on the question of Palestine",
     "Participation of Palestine in the work of the United Nations :":
-      "Participation of Palestine in the work of the United Nations :",
+      "Participation of Palestine in the work of the United Nations",
     "Special information programme of the question of Palestine of the Department of Public Information of the Secretariat :":
-      "Special information programme of the question of Palestine of the Department of Public Information of the Secretariat :",
+      "Special information programme of the question of Palestine of the Department of Public Information of the Secretariat",
     "Committee on the Exercise of the Inalienable Rights of the Palestinian people :":
-      "Committee on the Exercise of the Inalienable Rights of the Palestinian people :",
+      "Committee on the Exercise of the Inalienable Rights of the Palestinian people",
     "Special information programme on the question of Palestine of the Department of of Public Information of the Secretariat :":
-      "Special information programme on the question of Palestine of the Department of of Public Information of the Secretariat :",
+      "Special information programme on the question of Palestine of the Department of of Public Information of the Secretariat",
     "Committee on the Exercise of Inalienable Rights of the Palestinian People :":
-      "Committee on the Exercise of Inalienable Rights of the Palestinian People :",
+      "Committee on the Exercise of Inalienable Rights of the Palestinian People",
     "Peaceful settlement of the Question of Palestine :":
-      "Peaceful settlement of the Question of Palestine :",
+      "Peaceful settlement of the Question of Palestine",
     "Special Information Programme on the Question of Palestine of the Department of Public Information of the Secretariat :":
-      "Special Information Programme on the Question of Palestine of the Department of Public Information of the Secretariat :",
+      "Special Information Programme on the Question of Palestine of the Department of Public Information of the Secretariat",
     "Special Information Programme on question of Palestine of the Department of Public Information of the Secretariat :":
-      "Special Information Programme on question of Palestine of the Department of Public Information of the Secretariat :",
+      "Special Information Programme on question of Palestine of the Department of Public Information of the Secretariat",
     "Status of Palestine in the United Nations :":
-      "Status of Palestine in the United Nations :",
+      "Status of Palestine in the United Nations",
+    "Pro Israel Votes": 'Pro Israel Votes',
+    "Anti-Israel votes":'Anti-Israel votes',
+    "Neutral votes":"Neutral votes",
+    "List of countries":"List of countries",
+    "Date of last vote":"Date of last vote",
+    "In the last vote the state":"In the last vote the state",
+    " voted against Israel":" voted against Israel",
+    " avoided":" avoided",
+    " voted for Israel": " voted for Israel",
+    "Summary charts":"Summary charts",
+    "About":"About",
+    "Pro Israel":"Pro Israel",
+    "Anti-Israel":"Anti-Israel",
+    "Neutral":"Neutral",
+    "Votes":"Votes",
+    "history by date1":"",
+    "history by date2":"'s vote history by date",
+    'trnslate':'עב',
+    'Sort by support for Israel':'Sort by support for Israel',
+    'Sort by thousand byte':'Sort by support for Israel',
+    about1: 'Working method',
+    about2: 'I took from the UN website the list of votes according to the "Palestine" filter. The list of votes are:',
+    about3: `I did not take the votes of the Security Council, but only votes open to all countries, because the purpose of the project is to show Israel's status and friendship with the various countries, and not with the individual members of the Security Council.`,
+    about4: `I started from the premise that Israel always votes for itself, therefore the definition of voting for Israel is to vote like Israel. Each country has 5 options in each vote - yes, no, and neutral. Each of them is an active vote. And also a country that does not exist like East Germany, which is not counted, and another possibility of a country that exists but does not vote. For example, Afghanistan is in this position right now, and I treat it like a country that doesn't exist.`,
+    about5: 'contact',
+    about6: 'My name is Avraham Ben Arosh',
+    about7: 'Email: ',
+    about8: 'LinkedIn: '
+
   },
   he: {
     "Peaceful settlement of the question of Palestine :":
@@ -492,5 +521,34 @@ export const messages = {
       "Status of the Occupied Territory, including East Jerusalem :": 'מעמד השטח הכבוש, כולל מזרח ירושלים',
       "Question of Palestine : Department of Public Information of the Secretariat :": 'שאלת פלסטין: המחלקה להסברה של המזכירות',
       "Question of Palestine : Committee on the Exercise of the Inalienable Rights of the Palestinian People :": 'הוועדה למימוש הזכויות הבלתי ניתנות לביטול של העם הפלסטיני',
+      "Pro Israel Votes": 'הצבעות בעד ישראל',
+      "Anti-Israel votes":'הצבעות נגד ישראל',
+      "Neutral votes":"הצבעות ניטרליות",
+      "Date of last vote":"תאריך הצבעה אחרונה",
+      "In the last vote the state":"בהצבעה האחרונה המדינה",
+      "List of countries":"רשימת המדינות",
+      " voted against Israel":" הצביעה נגד ישראל",
+      " avoided":" נמנעה",
+      " voted for Israel": " הצביעה בעד ישראל",
+      "Summary charts": "גרפים מסכמים",
+      "About": "אודות",
+      "Pro Israel":"בעד ישראל",
+      "Anti-Israel":"נגד ישראל",
+      "Neutral":"נטרלי",
+      "Votes":"הצבעות",
+      "history by date1":"הסטוריית ההצבעות של ",
+      "history by date2":" לפי תאריך",
+      'trnslate':'En',
+      'Sort by support for Israel':'מיין לפי תמיכה בישראל',
+      'Sort by thousand byte':'מיין לפי סדר מילוני',
+      about1: 'שיטת עבודה',
+      about2: 'לקחתי מתוך אתר האו"ם את רשימת ההצבעות לפי פילטור "פלסטין" רשימת ההצבעות הן:',
+      about3: 'לא לקחתי את הצבעות של מועצת הביטחון אלא רק הצבעות פתוחות לכלל המדינות, כיוון שמטרת הפרוייקט הוא להראות את מעמד וחברות ישראל עם המדינות השונות, ולא עם החברות הבודדות של מועצת הביטחון.',
+      about4: 'יצאתי מנקודת הנחה שתמיד ישראל מצביעה בעד עצמה, ולכן ההגדרה להצבעה בעד ישראל היא להצביע כמו ישראל. יש לכל מדינה בכל הצבעה 5 אפשרויות - כן, לא, ונטרלי. כל אחת מהן זאת הצבעה אקטיבית. וכן מדינה שלא קיימת כמו מזרח גרמניה, שלא נספרת, ואפשרות נוספת של מדינה ששקיימת אבל לא מצביעה. לדוגמא אפגניסטן במעמד הזה כרגע, ואני מתייחס לזה כמו למדינה שלא קיימת.',
+      about5: 'דרכי יצירת קשר',
+      about6: 'שמי אברהם בן ארוש',
+      about7: 'מייל: ',
+      about8: 'לינקדאין: '
+
   },
 };

@@ -18,7 +18,7 @@ export default {
     chartOptions() {
       return {
         chart: {
-          type: "area",
+          type: this.goodBadData.length < 3 ? "column" : "area",
         },
 
         title: {
@@ -66,15 +66,15 @@ export default {
 
         series: [
           {
-            name: "נגד ישראל",
+            name: this.$t("Anti-Israel"),
             data: this.goodBadData.map((v) => v.bad),
           },
           {
-            name: "נטרלי",
+            name: this.$t("Neutral"),
             data: this.goodBadData.map((v) => v.neutral),
           },
           {
-            name: "בעד ישראל",
+            name: this.$t("Pro Israel"),
             data: this.goodBadData.map((v) => v.good),
           },
         ],

@@ -23,7 +23,7 @@ export default {
 
 <template>
   <div class="page">
-    <h1>גרפים מסכמים</h1>
+    <h1>{{$t('Summary charts')}}</h1>
     <chart-cmp v-for="filterDescrition in filterDescritionList" :filterDescrition="filterDescrition" />
   </div>
 </template>

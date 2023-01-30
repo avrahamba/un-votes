@@ -24,7 +24,7 @@ export default {
       selectedCountry: null,
       countryList: [],
       classType: ["card-bed", "card-neutral", "card-good"],
-      textLastType: ["הצביעה נגד ישראל", "נמנעה", "הצביעה בעד ישראל"],
+      textLastType: [this.$t(" voted against Israel"), this.$t(" avoided"), this.$t(" voted for Israel")],
       votesByDate: [],
     };
   },
@@ -36,15 +36,13 @@ export default {
         },
 
         title: {
-          text: `הסטוריית ההצבעות של ${this.$t(
-            this.selectedCountry.key
-          )} לפי תאריך`,
+          text: this.$t("history by date1")+this.$t(this.selectedCountry.key)+this.$t("history by date2"),
           align: "center",
         },
 
         yAxis: {
           title: {
-            text: "הצבעות",
+            text: this.$t('Votes'),
           },
           stackLabels: {
             enabled: true,
@@ -74,15 +72,15 @@ export default {
 
         series: [
           {
-            name: "נגד ישראל",
+            name: this.$t("Anti-Israel"),
             data: this.votesByDate.map((v) => v.countB),
           },
           {
-            name: "נטרלי",
+            name: this.$t("Neutral"),
             data: this.votesByDate.map((v) => v.countA),
           },
           {
-            name: "בעד ישראל",
+            name: this.$t("Pro Israel"),
             data: this.votesByDate.map((v) => v.countG),
           },
         ],
@@ -111,7 +109,7 @@ export default {
 
 <template>
   <div class="page" v-if="countryData">
-    <h1>{{ selectedCountry.label }}</h1>
+    <h1>{{ $t(selectedCountry.key) }}</h1>
     <highcharts
       style="margin-bottom: 20px"
       :options="chartOptions"
@@ -127,13 +125,11 @@ export default {
           <div class="descrition">
             {{ $t(vote.descrition) }}
           </div>
-          <div class="good">הצבעות בעד ישראל: {{ vote.countG }}</div>
-          <div class="noutral">הצבעות נטרליות: {{ vote.countA }}</div>
-          <div class="good">הצבעות נגד ישראל: {{ vote.countB }}</div>
-          <div class="good">תאריך הצבעה אחרונה: {{ vote.lastDate }}</div>
-          <div class="good">
-            בהצבעה האחרונה המדינה {{ textLastType[vote.type] }}
-          </div>
+          <div>{{ $t('Pro Israel Votes') }}: {{ vote.countG }}</div>
+          <div>{{ $t('Neutral votes') }}: {{ vote.countA }}</div>
+          <div>{{ $t('Anti-Israel votes') }}: {{ vote.countB }}</div>
+          <div>{{ $t('Date of last vote') }}: {{ vote.lastDate }}</div>
+          <div>{{ $t('In the last vote the state') + textLastType[vote.type] }}</div>
         </v-card-item>
       </v-card>
     </div>
