@@ -39,36 +39,65 @@ export function countryDataFn(countryCode) {
     .map((v) => ({ ...v.meta, vote: v.votes[countryCode] }))
     .filter((v) => v.vote);
   votes.sort((a, b) => (a.date > b.date ? 1 : -1));
-  const res = [];
+  const votesByDescrition = [];
+  const votesByDate = [];
   votes.forEach((v) => {
-    const index = res.map((r) => r.descrition).indexOf(v.descrition);
-    const status = v.vote === "A" ? "A" : v.vote === v.israel ? "G" : "B";
-    if (index === -1) {
-      res.push({
-        descrition: v.descrition,
-        countG: status === "G" ? 1 : 0,
-        countB: status === "B" ? 1 : 0,
-        countA: status === "A" ? 1 : 0,
-        last: status,
-        lastDate: v.date,
-      });
-    } else {
-      res[index].last = status;
-      res[index].lastDate = v.date;
-      switch (status) {
-        case "A":
-          res[index].countA++;
-          break;
-        case "G":
-          res[index].countG++;
-          break;
-        case "B":
-          res[index].countB++;
-          break;
+    {
+      const index = votesByDescrition
+        .map((r) => r.descrition)
+        .indexOf(v.descrition);
+      const status = v.vote === "A" ? "A" : v.vote === v.israel ? "G" : "B";
+      if (index === -1) {
+        votesByDescrition.push({
+          descrition: v.descrition,
+          countG: status === "G" ? 1 : 0,
+          countB: status === "B" ? 1 : 0,
+          countA: status === "A" ? 1 : 0,
+          last: status,
+          lastDate: v.date,
+        });
+      } else {
+        votesByDescrition[index].last = status;
+        votesByDescrition[index].lastDate = v.date;
+        switch (status) {
+          case "A":
+            votesByDescrition[index].countA++;
+            break;
+          case "G":
+            votesByDescrition[index].countG++;
+            break;
+          case "B":
+            votesByDescrition[index].countB++;
+            break;
+        }
+      }
+    }
+    {
+      const index = votesByDate.map((r) => r.date).indexOf(v.date);
+      const status = v.vote === "A" ? "A" : v.vote === v.israel ? "G" : "B";
+      if (index === -1) {
+        votesByDate.push({
+          countG: status === "G" ? 1 : 0,
+          countB: status === "B" ? 1 : 0,
+          countA: status === "A" ? 1 : 0,
+          date: v.date,
+        });
+      } else {
+        switch (status) {
+          case "A":
+            votesByDate[index].countA++;
+            break;
+          case "G":
+            votesByDate[index].countG++;
+            break;
+          case "B":
+            votesByDate[index].countB++;
+            break;
+        }
       }
     }
   });
-  return res;
+  return { votesByDescrition, votesByDate };
 }
 
 export function countriesStatus() {

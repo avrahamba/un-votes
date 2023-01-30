@@ -1,3 +1,10 @@
+<script>
+export default{
+    beforeMount(){
+        window.scrollTo(0, 0);
+    }
+}
+</script>
 <template>
     <div class="page">
         <h1>אודות</h1>
